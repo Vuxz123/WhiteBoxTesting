@@ -1,4 +1,4 @@
-package com.ethnicth.analyzer.exception;
+package com.ethnicth.sim.exception;
 
 public class IllegalSelectedWayException extends Exception{
     public IllegalSelectedWayException(int defaultOutputWay, int maxWay) {

@@ -1,4 +1,4 @@
-package com.ethnicth.analyzer.method.component;
+package com.ethnicth.sim.method.component;
 
 import java.util.Map;
 

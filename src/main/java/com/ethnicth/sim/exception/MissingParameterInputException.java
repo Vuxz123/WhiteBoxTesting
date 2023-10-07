@@ -1,4 +1,4 @@
-package com.ethnicth.analyzer.exception;
+package com.ethnicth.sim.exception;
 
 import java.util.List;
 

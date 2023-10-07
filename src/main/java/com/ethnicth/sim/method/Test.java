@@ -1,4 +1,4 @@
-package com.ethnicth.analyzer.method;
+package com.ethnicth.sim.method;
 
 public class Test {
     public int a;

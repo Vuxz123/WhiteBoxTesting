@@ -1,10 +1,9 @@
-package com.ethnicth.analyzer.method.component;
+package com.ethnicth.sim.method.component;
 
-import com.ethnicth.analyzer.exception.IllegalDefaultOutputWayException;
-import com.ethnicth.analyzer.exception.IllegalSelectedWayException;
-import com.ethnicth.analyzer.method.Method;
+import com.ethnicth.sim.exception.IllegalDefaultOutputWayException;
+import com.ethnicth.sim.exception.IllegalSelectedWayException;
+import com.ethnicth.sim.method.Method;
 
-import java.util.List;
 import java.util.Map;
 
 public abstract class MultiDirectionNode implements Node {
