@@ -1,12 +1,11 @@
 package com.ethnicthv.test.analyzer.method.component;
 
-import com.ethnicth.sim.exception.IllegalParameterInputException;
-import com.ethnicth.sim.exception.MissingParameterInputException;
-import com.ethnicth.sim.method.Method;
-import com.ethnicth.sim.method.component.MonoDirectionNode;
-import com.ethnicth.sim.method.component.Node;
-import com.ethnicth.sim.method.component.block.BlockNode;
-import com.ethnicth.sim.method.component.ret.ReturnNode;
+import com.ethnicthv.sim.runtime.exception.IllegalParameterInputException;
+import com.ethnicthv.sim.runtime.exception.MissingParameterInputException;
+import com.ethnicthv.sim.runtime.method.Method;
+import com.ethnicthv.sim.runtime.method.component.MonoDirectionNode;
+import com.ethnicthv.sim.runtime.method.component.Node;
+import com.ethnicthv.sim.runtime.method.component.ret.ReturnNode;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -23,7 +22,6 @@ public class MonoDirectionNodeTest {
             MonoDirectionNode node2 = new MonoDirectionNodeImpl_();
 
             MonoDirectionNode block1Node1 = new MonoDirectionNodeImpl_();
-            BlockNode block1 = new BlockNode(block1Node1);
 
             Map<String, Object> heap = new HashMap<>();
             heap.put("a", 10);
@@ -37,7 +35,7 @@ public class MonoDirectionNodeTest {
                     new HashMap<>()
             );
 
-            node1.setNext(block1);
+            node1.setNext(block1Node1);
 
             node1.setBody(((s, h) -> {
                 int a = (int) h.get("a");
@@ -52,7 +50,7 @@ public class MonoDirectionNodeTest {
                 s.put("d", a - b);
             });
 
-            block1.setNext(node2);
+            block1Node1.setNext(node2);
 
             node2.setBody((s,h) -> {
                 int b = (int) h.get("b");
