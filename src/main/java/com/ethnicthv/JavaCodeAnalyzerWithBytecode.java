@@ -1,5 +1,8 @@
 package com.ethnicthv;
 
+import com.ethnicthv.sim.runtime.executor.Execution;
+import com.ethnicthv.sim.runtime.executor.Executor;
+import com.ethnicthv.sim.runtime.executor.provider.FunctionConstraints;
 import com.sun.source.tree.MethodTree;
 import com.sun.source.tree.StatementTree;
 import com.sun.source.util.JavacTask;
@@ -43,6 +46,11 @@ public class JavaCodeAnalyzerWithBytecode {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public void a() {
+        Execution a = new Execution(FunctionConstraints.E.aconst_null, (classFile, frame, index) -> {});
+        Executor b = a.EXECUTOR;
     }
 
     private static class MethodFinder extends TreeScanner<Void, String> {

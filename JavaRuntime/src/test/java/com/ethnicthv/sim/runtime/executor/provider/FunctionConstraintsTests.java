@@ -11,7 +11,7 @@ public class FunctionConstraintsTests {
         FunctionConstraints.E[] enums = FunctionConstraints.E.indexedInstruction;
         double actualSum = 0;
         for (FunctionConstraints.E e : enums) {
-            actualSum += e.form;
+            actualSum += e.opcode;
         }
         double expectedSum = (201D) / 2 * 202;
 //        System.out.println("Actual: " + actualSum );
@@ -25,11 +25,11 @@ public class FunctionConstraintsTests {
         FunctionConstraints.E[] enums = FunctionConstraints.E.indexedInstruction;
         int l = enums.length;
 
-        int lastForm = enums[l - 1].form;
+        int lastForm = enums[l - 1].opcode;
         int lastIndex = l - 1;
         Assertions.assertEquals(lastIndex, lastForm);
 
-        int firstForm = enums[0].form;
+        int firstForm = enums[0].opcode;
         int firstIndex = 0;
         Assertions.assertEquals(firstIndex, firstForm);
     }
@@ -41,7 +41,7 @@ public class FunctionConstraintsTests {
         boolean checkGap = true;
         int l = enums.length;
         for (int i = 1; i < l; i++) {
-            if (enums[i].form - enums[i - 1].form < 0) {
+            if (enums[i].opcode - enums[i - 1].opcode < 0) {
                 checkGap = false;
                 break;
             }
